@@ -1,55 +1,3 @@
-﻿@media screen and (max-width: 600px) {  
-  .theme-btn{
-    width: 50px;
-    height: 50px;
-  }
-  
-  .about-container{
-    grid-template-columns: 1fr;
-    .right-about{
-      grid-template-columns: 1fr;
-      padding-top: 2.5rem;
-    }
-    .left-about{
-      padding-right: 0;
-      p{
-        padding-left: 0;
-      }
-    }
-  }
-  
-  .timeline{
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  
-  .portfolios{
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  
-  .blogs{
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  
-  .section{
-    padding: 2rem 2.5rem !important;
-  }
-  
-  .main-title{
-    h2{
-      font-size: 2rem;
-      span{
-        font-size: 2.5rem;
-      }
-      .bg-text{
-        font-size: 3rem;
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 1432px){
   header{
     padding:0 !important;
@@ -103,6 +51,7 @@
   .blogs{
     grid-template-columns: 1fr 1fr;
   }
+  
 }
 
 @media screen and (max-width: 970px) {
@@ -181,5 +130,75 @@
         font-size: 4rem;
       }
     }
+  }
+}
+
+@media screen and (max-width: 600px) {  
+  .theme-btn{
+    width: 50px;
+    height: 50px;
+  }
+  
+  .about-container{
+    grid-template-columns: 1fr;
+    .right-about{
+      grid-template-columns: 1fr;
+      padding-top: 2.5rem;
+    }
+    .left-about{
+      padding-right: 0;
+      p{
+        padding-left: 0;
+      }
+    }
+  }
+  
+  .timeline{
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  
+  .portfolios{
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  
+  .blogs{
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  
+  .section{
+    padding: 2rem 2.5rem !important;
+  }
+  
+  .main-title{
+    h2{
+      font-size: 2rem;
+      span{
+        font-size: 2.5rem;
+      }
+      .bg-text{
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1840px) {
+  .mobile-only {
+    display: none;
+  }
+  .desktop-only {
+    display: grid;
+  }
+}
+
+@media screen and (max-width: 1840px) {
+  .mobile-only {
+    display: block;
+  }
+  .desktop-only {
+    display: none;
   }
 }

@@ -12,6 +12,9 @@
   --color-black: #000;
   --color-green: rgb(42, 252, 152);
   --color-blue: rgb(41, 121, 255);
+  --color-purple: rgb(123, 31, 162);
+  --color-violet: rgb(103, 58, 183);
+  --color-pink: rgb(244, 143, 177);
   --color-grey0: #f8f8f8;
   --color-grey-1: #dbe1e8;
   --color-grey-2: #b2becd;
@@ -949,6 +952,81 @@ header {
 
 .fancy:hover > .outer:nth-child(16) {
   transform: translate(-10%, 60%) rotate(15deg);
+}
+
+
+/* ---- magic text styles ---- */
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes scale {
+  from, to {
+    transform: scale(0);
+  }
+  
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(180deg);
+  }
+}
+  
+.magic {
+  display: inline-block;
+  position: relative;
+}
+
+.magic > .magic-star {
+  --size: clamp(20px, 1.5vw, 30px);
+  
+  animation: scale 700ms ease forwards;
+  display: block;
+  height: var(--size);
+  left: var(--star-left);
+  position: absolute;
+  top: var(--star-top);
+  width: var(--size);
+}
+
+.magic > .magic-star > svg {
+  animation: rotate 1000ms linear infinite;
+  display: block;
+  opacity: 0.7;
+}
+
+.magic > .magic-star > svg > path {
+  fill: var(--color-violet);
+}
+
+.magic > .magic-text {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--color-purple),
+    var(--color-violet),
+    var(--color-pink),
+    var(--color-purple)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
 }
 
 @import "media";

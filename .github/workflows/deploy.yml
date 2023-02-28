@@ -15,12 +15,9 @@ jobs:
             ref: master
             fetch-depth: 10
             submodules: true
-              
-        - name: Make destination directory for compiled CSS
-          run: mkdir -vp /tmp/assets/css
 
         - name: Compile CSS from SCSS files
           uses: gha-utilities/sass-build@v0.4.11
           with:
-            source: /styles/styles.scss
-            destination: /tmp/assets/css/main.css
+            source: ./styles/styles.scss
+            destination: ./styles/styles.css

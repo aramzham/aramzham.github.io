@@ -15,18 +15,12 @@ jobs:
             ref: master
             fetch-depth: 10
             submodules: true
-
-        - name: Make destination directory for compiled CSS
-          run: mkdir -vp /tmp/portfolio_website/assets/css
-  
+            
         - name: Compile CSS from SCSS files
           uses: gha-utilities/sass-build@v0.4.11
           with:
             source: styles/styles.scss
-            destination: /tmp/portfolio_website/assets/css/styles.css
-  
-        - name: Move compiled CSS to path within pr-pages branch
-          run: mv /tmp/portfolio_website/assets/css styles/
+            destination: styles/styles.css
   
         - name: Add and Commit changes to pr-pages branch
           run: |

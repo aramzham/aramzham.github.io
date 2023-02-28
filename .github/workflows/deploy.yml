@@ -23,7 +23,7 @@ jobs:
           uses: gha-utilities/sass-build@v0.4.11
           with:
             source: styles/styles.scss
-            destination: /tmp/portfolio_website/assets/css/main.css
+            destination: /tmp/portfolio_website/assets/css/styles.css
   
         - name: Move compiled CSS to path within pr-pages branch
           run: mv /tmp/portfolio_website/assets/css styles/

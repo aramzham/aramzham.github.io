@@ -11,4 +11,4 @@ Pages:
   <li>Contact me :love_letter:</li>
 </ul>
 
-[^1]: <a href="https://www.youtube.com/watch?v=xV7S8BhIeBo">link</a> to the tutarial
+[^1]: <a href="https://www.youtube.com/watch?v=xV7S8BhIeBo">link</a> to the tutorial
